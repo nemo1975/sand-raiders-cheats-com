@@ -5,9 +5,10 @@ import zlib from 'node:zlib';
 import { resolvePathRedirect } from './redirects.mjs';
 import { resolveCheckoutPathRedirect } from '../src/config/checkout-redirects.mjs';
 
-const CANONICAL_HOST = 'sandraiderscheats.com';
+const CANONICAL_HOST = (process.env.CANONICAL_HOST || 'sandraiderscheats.com').toLowerCase();
 const distDir = path.resolve('dist');
 const port = Number(process.env.PORT) || 3000;
+const host = process.env.HOST || '0.0.0.0';
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
@@ -210,6 +211,6 @@ const server = http.createServer((req, res) => {
   res.end('Not found');
 });
 
-server.listen(port, '0.0.0.0', () => {
-  console.log(`Serving ${distDir} on http://0.0.0.0:${port} (gzip/br enabled)`);
+server.listen(port, host, () => {
+  console.log(`Serving ${distDir} on http://${host}:${port} (gzip/br enabled)`);
 });

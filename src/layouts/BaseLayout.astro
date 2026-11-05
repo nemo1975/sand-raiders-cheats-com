@@ -56,32 +56,8 @@ const robotsContent = noindex
   <head>
     <meta charset="UTF-8" />
     <script is:inline>
-      (function () {
-        try {
-          document.documentElement.classList.add('dark');
-          document.documentElement.style.colorScheme = 'dark';
-          localStorage.setItem('colorTheme', 'dark');
-          localStorage.setItem('starwind-theme', 'dark');
-        } catch (e) {
-          document.documentElement.classList.add('dark');
-        }
-        try {
-          var params = new URLSearchParams(location.search);
-          var hl = params.get('hl') || localStorage.getItem('site-locale') || 'en';
-          var rtl = hl === 'he' || hl === 'ar';
-          document.documentElement.lang = hl === 'zh' ? 'zh-Hans' : hl === 'zh-TW' ? 'zh-Hant' : hl;
-          document.documentElement.dir = rtl ? 'rtl' : 'ltr';
-          document.documentElement.dataset.locale = hl;
-          if (hl && hl !== 'en') {
-            var preload = document.createElement('link');
-            preload.rel = 'preload';
-            preload.as = 'fetch';
-            preload.href = '/locales/' + encodeURIComponent(hl) + '.json';
-            preload.crossOrigin = 'anonymous';
-            document.head.appendChild(preload);
-          }
-        } catch (e) {}
-      })();
+      document.documentElement.classList.add('dark');
+      document.documentElement.style.colorScheme = 'dark';
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <style is:inline>
@@ -95,31 +71,6 @@ const robotsContent = noindex
     <meta name="googlebot" content={robotsContent} />
     <meta name="theme-color" content="#5B21B6" />
     <link rel="canonical" href={canonical} />
-    <link rel="alternate" hreflang="en" href={canonical} />
-    {
-      [
-        ['de', 'de'],
-        ['fr', 'fr'],
-        ['es', 'es'],
-        ['pt', 'pt'],
-        ['ru', 'ru'],
-        ['ja', 'ja'],
-        ['ko', 'ko'],
-        ['zh-Hans', 'zh'],
-        ['zh-Hant', 'zh-TW'],
-        ['he', 'he'],
-        ['tr', 'tr'],
-        ['ar', 'ar'],
-        ['vi', 'vi'],
-        ['pl', 'pl'],
-        ['it', 'it'],
-        ['th', 'th'],
-        ['id', 'id'],
-      ].map(([hreflang, hl]) => (
-        <link rel="alternate" hreflang={hreflang} href={`${canonical}${canonical.includes('?') ? '&' : '?'}hl=${hl}`} />
-      ))
-    }
-    <link rel="alternate" hreflang="x-default" href={canonical} />
     <link
       rel="alternate"
       type="application/rss+xml"
@@ -147,20 +98,6 @@ const robotsContent = noindex
     <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content={t.site.name} />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:locale:alternate" content="de_DE" />
-    <meta property="og:locale:alternate" content="fr_FR" />
-    <meta property="og:locale:alternate" content="es_ES" />
-    <meta property="og:locale:alternate" content="pt_BR" />
-    <meta property="og:locale:alternate" content="ru_RU" />
-    <meta property="og:locale:alternate" content="ja_JP" />
-    <meta property="og:locale:alternate" content="ko_KR" />
-    <meta property="og:locale:alternate" content="zh_CN" />
-    <meta property="og:locale:alternate" content="zh_TW" />
-    <meta property="og:locale:alternate" content="he_IL" />
-    <meta property="og:locale:alternate" content="tr_TR" />
-    <meta property="og:locale:alternate" content="ar_SA" />
-    <meta property="og:locale:alternate" content="vi_VN" />
-    <meta property="og:locale:alternate" content="pl_PL" />
 
     {
       ogType === 'article' && articlePublishedTime && (

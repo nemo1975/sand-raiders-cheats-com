@@ -8,9 +8,9 @@ export const en: Translations = {
   site: {
     name: 'Sand Raiders Cheats',
     domain: 'sandraiderscheats.com',
-    title: 'Sand Raiders of Sophie Cheats | Sand Raiders Cheats on PC',
+    title: 'Sand Raiders of Sophie Cheats | ESP, Aimbot & Radar on PC',
     description:
-      'Sand Raiders of Sophie cheats on Windows PC — Sand Raiders Cheats with aimbot, player ESP, Trampler ESP, radar, and skin changer. Review hacks modules, plans from $35, and status after patches.',
+      'Windows PC overlays for SAND: Raiders of Sophie — player ESP, aimbot, radar, and Skin Changer. Compare plans and check status before checkout.',
     discord: DISCORD_INVITE,
   },
   nav: [

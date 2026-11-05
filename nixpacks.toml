@@ -1,5 +1,10 @@
+# Nixpacks — VPS deploy (Coolify, Dokploy, Railway-style builders, etc.)
+# Build: Astro static site → dist/
+# Start: Node static server (scripts/serve.mjs) on PORT, 0.0.0.0
+
 [phases.setup]
-nixPkgs = ["nodejs_22", "npm-9_x"]
+nixPkgs = ["nodejs_22", "npm-9_x", "vips"]
+aptPkgs = ["libvips42", "libvips-dev", "ca-certificates"]
 
 [phases.install]
 cmds = ["npm ci"]
@@ -11,4 +16,6 @@ cmds = ["npm run build"]
 cmd = "npm run start"
 
 [variables]
+NODE_ENV = "production"
 HOST = "0.0.0.0"
+# Nixpacks / reverse proxy sets PORT at runtime (default 3000 in serve.mjs if unset).

@@ -183,6 +183,12 @@ function initSmoothScrollLazy() {
 }
 
 function bootSite() {
+  try {
+    localStorage.setItem('colorTheme', 'dark');
+    localStorage.setItem('starwind-theme', 'dark');
+  } catch {
+    // ignore
+  }
   initFonts();
   initNavHighlight();
   initInPageScroll();

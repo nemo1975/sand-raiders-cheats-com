@@ -10,9 +10,9 @@ export interface PageSeoEntry {
 
 export const PAGE_SEO: Record<string, PageSeoEntry> = {
   '/': {
-    title: 'Sand Raiders of Sophie Cheats | Sand Raiders Cheats on PC',
+    title: 'Sand Raiders of Sophie Cheats | ESP, Aimbot & Radar on PC',
     description:
-      'Sand Raiders of Sophie cheats and Sand Raiders Cheats for Windows PC—aimbot, player ESP, Trampler ESP, radar, and skin changer. Review plans, hacks modules, and status before checkout.',
+      'Windows PC overlays for SAND: Raiders of Sophie — player ESP, aimbot, radar, and Skin Changer. Compare plans and check status before checkout.',
   },
   '/features/': {
     title: 'Sand Raiders of Sophie Hacks & Features | Sand Raiders Cheats',

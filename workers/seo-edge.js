@@ -56,8 +56,13 @@ function applyAssetHeaders(pathname, headers) {
     return;
   }
 
-  if (contentType.toLowerCase().startsWith('text/html') && !/charset=/i.test(contentType)) {
-    headers.set('content-type', 'text/html; charset=utf-8');
+  if (contentType.toLowerCase().startsWith('text/html')) {
+    if (!/charset=/i.test(contentType)) {
+      headers.set('content-type', 'text/html; charset=utf-8');
+    }
+    if (!headers.has('cache-control')) {
+      headers.set('cache-control', 'public, max-age=60, s-maxage=3600, stale-while-revalidate=86400');
+    }
   }
 
   if (isImmutableAsset(pathname)) {
