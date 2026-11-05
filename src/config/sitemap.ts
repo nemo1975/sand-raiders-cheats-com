@@ -19,6 +19,7 @@ export function sitemapSerialize(item: SitemapItem): SitemapItem | undefined {
   if (
     path.includes('/404') ||
     path.startsWith('/go/') ||
+    path.startsWith('/products/') ||
     path === '/monthly/' ||
     path === '/lifetime/' ||
     path.includes('/rss.xml') ||
@@ -64,13 +65,13 @@ export function sitemapSerialize(item: SitemapItem): SitemapItem | undefined {
     return item;
   }
 
-  if (path.startsWith('/products/')) {
-    item.priority = 0.8;
-    item.changefreq = 'weekly';
-    return item;
-  }
-
-  if (path === '/store/' || path === '/features/' || path === '/dma/' || path === '/hwid/') {
+  if (
+    path === '/store/' ||
+    path === '/features/' ||
+    path === '/dma/' ||
+    path === '/hwid/' ||
+    path === '/skin-changer/'
+  ) {
     item.priority = 0.9;
     item.changefreq = 'weekly';
     return item;

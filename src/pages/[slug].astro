@@ -21,7 +21,7 @@ import {
   discussionForumPostingSchema,
   parseBlogDate,
 } from '../utils/schema';
-import { resolveCheckoutHref } from '../config/checkout';
+import { PRIMARY_CHECKOUT_PATH, resolveCheckoutHref } from '../config/checkout';
 import { screenshotAlt } from '../data/screenshots';
 import { displayImageType, imageSrcSet, webpSrc } from '../utils/responsiveImage';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
@@ -215,7 +215,14 @@ const published = post ? parseBlogDate(post.date) : undefined;
               </Prose>
 
               <nav class="blog-article__actions" aria-label="Continue reading">
-                <Button as="a" href={ROUTES.store} variant="primary" aria-label={t.ui.checkoutAria}>
+                <Button
+                  as="a"
+                  href={PRIMARY_CHECKOUT_PATH}
+                  variant="primary"
+                  aria-label={t.ui.checkoutAria}
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                >
                   Buy now
                   <Icon name="arrowRight" size={17} />
                 </Button>

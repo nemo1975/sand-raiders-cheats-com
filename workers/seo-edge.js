@@ -1,6 +1,6 @@
 import { resolveCheckoutPathRedirect } from '../src/config/checkout-redirects.mjs';
 
-const CANONICAL_HOST = 'overwatchcheat.com';
+const CANONICAL_HOST = 'sandraiderscheats.com';
 const FILE_ASSETS = new Set([
   '/sitemap.xml',
   '/sitemap-index.xml',
@@ -18,7 +18,7 @@ const XML_FILES = new Set(['/sitemap.xml', '/sitemap-index.xml', '/sitemap-0.xml
 const FALLBACK_SITEMAP = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://overwatchcheat.com/</loc>
+    <loc>https://sandraiderscheats.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -27,9 +27,8 @@ const FALLBACK_SITEMAP = `<?xml version="1.0" encoding="UTF-8"?>
 const COVER_PATHS = new Set([
   '/opengraph.jpg',
   '/og.jpg',
-  '/images/gameplay/ow2.jpg',
-  '/images/gameplay/overwatch-aim.jpg',
-  '/images/gameplay/ow-lab-combat.jpg',
+  '/images/gameplay/gallery-01.png',
+  '/images/gameplay/gallery-02.jpg',
 ]);
 const COVER_ASSET = '/opengraph.jpg';
 
@@ -92,7 +91,7 @@ async function serveExactAsset(env, request, pathname, contentType) {
 
   if (pathname === '/robots.txt') {
     return xmlResponse(
-      'User-agent: *\nAllow: /\nSitemap: https://overwatchcheat.com/sitemap.xml\n',
+      'User-agent: *\nAllow: /\nDisallow: /go/\nDisallow: /products/\nDisallow: /search/\nSitemap: https://sandraiderscheats.com/sitemap.xml\n',
       request.method,
       'text/plain; charset=utf-8',
     );
@@ -157,9 +156,19 @@ export default {
         return Response.redirect(checkout, 302);
       }
 
+      const hl = url.searchParams.get('hl');
+      const nonEnglishLocale = hl && hl !== 'en';
+
       const response = await env.ASSETS.fetch(request);
       const headers = new Headers(response.headers);
       applyAssetHeaders(url.pathname, headers);
+
+      if (nonEnglishLocale) {
+        const contentType = headers.get('content-type') ?? '';
+        if (contentType.toLowerCase().includes('text/html')) {
+          headers.set('x-robots-tag', 'noindex, follow');
+        }
+      }
 
       return new Response(response.body, {
         status: response.status,

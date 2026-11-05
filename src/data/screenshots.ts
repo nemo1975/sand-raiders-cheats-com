@@ -1,22 +1,11 @@
 export interface ScreenshotShot {
-  key:
-    | 'ow2'
-    | 'ow7'
-    | 'ow3'
-    | 'ow1'
-    | 'owHanzo'
-    | 'ow8'
-    | 'ow4'
-    | 'ow9'
-    | 'ow6'
-    | 'ow5'
-    | 'ow2gothic';
+  key: 'gallery01' | 'gallery02' | 'gallery03' | 'gallery04' | 'gallery05' | 'gallery06';
   file: string;
   src: string;
   alt: string;
   caption: string;
   captionDesc: string;
-  palette: 'temple-aim' | 'havana-ashe' | 'cassidy-cyan' | 'kiriko-menu' | 'hanzo-green' | 'yellow-esp';
+  palette: 'dune-aim' | 'ruin-city' | 'dieselpunk-cyan' | 'trampler-menu' | 'sophie-green' | 'yellow-esp';
 }
 
 export interface ExtraShot {
@@ -25,7 +14,7 @@ export interface ExtraShot {
   alt: string;
   caption: string;
   captionDesc: string;
-  palette: 'cloud-dma' | 'hwid-spoofer';
+  palette: 'cloud-dma' | 'hwid-spoofer' | 'skin-changer';
 }
 
 const gameplay = '/images/gameplay';
@@ -34,110 +23,74 @@ const extras = '/images/extras';
 export const SCREENSHOT_WIDTH = 1024;
 export const SCREENSHOT_HEIGHT = 574;
 
-/**
- * Display order: priority 1–5 first, then remaining shots interleaved
- * so adjacent slider/thumb items never share a map/hero/palette.
- * Havana Ashe = ow-7/ow-8/ow-6; Cassidy cyan = ow-3/ow-4/ow-5; yellow ESP = ow-9/ow-2.
- */
+/** Blog cards and OG fallbacks cycle through the same six gallery sources. */
+export const GALLERY_IMAGE_PATHS = [
+  `${gameplay}/gallery-01.png`,
+  `${gameplay}/gallery-02.jpg`,
+  `${gameplay}/gallery-03.png`,
+  `${gameplay}/gallery-04.png`,
+  `${gameplay}/gallery-05.png`,
+  `${gameplay}/gallery-06.jpg`,
+] as const;
+
+export function galleryImageForIndex(index: number): string {
+  return GALLERY_IMAGE_PATHS[index % GALLERY_IMAGE_PATHS.length]!;
+}
+
 export const SCREENSHOT_RANK: ScreenshotShot[] = [
   {
-    key: 'ow2',
-    file: 'ow2.jpg',
-    src: `${gameplay}/ow2.jpg`,
-    palette: 'temple-aim',
-    alt: 'Overwatch 2 aim overlay during overtime in a close indoor fight',
-    caption: 'Close fight',
-    captionDesc: 'Target boxes and combat readouts in a contested indoor fight.',
-  },
-  {
-    key: 'ow7',
-    file: 'ow-7.jpg',
-    src: `${gameplay}/ow-7.jpg`,
-    palette: 'havana-ashe',
-    alt: 'Overwatch 2 skeleton ESP and health bars during a Havana night fight',
-    caption: 'Combat overlay',
-    captionDesc: 'Skeleton ESP and health readouts on nearby enemies.',
-  },
-  {
-    key: 'ow3',
-    file: 'ow-3.jpg',
-    src: `${gameplay}/ow-3.jpg`,
-    palette: 'cassidy-cyan',
-    alt: 'Overwatch 2 player ESP boxes, health, and outlines on a night payload map',
+    key: 'gallery01',
+    file: 'gallery-01.png',
+    src: `${gameplay}/gallery-01.png`,
+    palette: 'dune-aim',
+    alt: 'Sand Raiders of Sophie Cheats player ESP with box, skeleton, and distance labels on a Sophie desert plain',
     caption: 'Player ESP',
-    captionDesc: 'Nameplates, health, and outlines on nearby players.',
+    captionDesc: 'Box outline, skeleton readout, and distance marker on a nearby raider.',
   },
   {
-    key: 'ow1',
-    file: 'ow1.jpg',
-    src: `${gameplay}/ow1.jpg`,
-    palette: 'kiriko-menu',
-    alt: 'Overwatch 2 ESP menu with skeleton and box overlays in an outdoor fight',
-    caption: 'ESP modules',
-    captionDesc: 'Listed ESP toggles next to in-world skeleton and box overlays.',
+    key: 'gallery02',
+    file: 'gallery-02.jpg',
+    src: `${gameplay}/gallery-02.jpg`,
+    palette: 'trampler-menu',
+    alt: 'Sand Raiders cheats loot and extraction ESP on a Trampler deck above the Sophie dunes',
+    caption: 'Loot and extract',
+    captionDesc: 'World labels for walkers, extraction cues, and distant contacts.',
   },
   {
-    key: 'owHanzo',
-    file: 'ow-1.jpg',
-    src: `${gameplay}/ow-1.jpg`,
-    palette: 'hanzo-green',
-    alt: 'Overwatch 2 distance ESP, health labels, and objective markers from high ground',
-    caption: 'Distance and direction',
-    captionDesc: 'Distance ESP and objective labels toward a payload fight.',
-  },
-  {
-    key: 'ow8',
-    file: 'ow-8.jpg',
-    src: `${gameplay}/ow-8.jpg`,
-    palette: 'havana-ashe',
-    alt: 'Overwatch 2 skeleton ESP stick figures during a Havana street fight',
+    key: 'gallery03',
+    file: 'gallery-03.png',
+    src: `${gameplay}/gallery-03.png`,
+    palette: 'sophie-green',
+    alt: 'Sand Raiders of Sophie hacks skeleton ESP and health bar on a sniper raider at dusk',
     caption: 'Skeleton ESP',
-    captionDesc: 'Skeleton ESP on enemies across a street fight.',
+    captionDesc: 'Health bar, skeleton overlay, and weapon readout on a ridge target.',
   },
   {
-    key: 'ow4',
-    file: 'ow-4.jpg',
-    src: `${gameplay}/ow-4.jpg`,
-    palette: 'cassidy-cyan',
-    alt: 'Overwatch 2 radar outline with health ESP inside a tight corridor',
-    caption: 'Radar and skeleton',
-    captionDesc: 'Local radar outline plus health ESP on nearby targets.',
-  },
-  {
-    key: 'ow9',
-    file: 'ow-9.jpg',
-    src: `${gameplay}/ow-9.jpg`,
+    key: 'gallery04',
+    file: 'gallery-04.png',
+    src: `${gameplay}/gallery-04.png`,
     palette: 'yellow-esp',
-    alt: 'Overwatch 2 wallhack silhouette ESP through a building on King’s Row',
-    caption: 'Through-wall ESP',
-    captionDesc: 'Silhouette ESP marking an enemy through a wall.',
+    alt: 'Sand Raiders loot ESP marking weapon crates and supplies across orange Sophie dunes',
+    caption: 'Loot ESP',
+    captionDesc: 'Crate tiers, mob labels, and distance tags on open desert terrain.',
   },
   {
-    key: 'ow6',
-    file: 'ow-6.jpg',
-    src: `${gameplay}/ow-6.jpg`,
-    palette: 'havana-ashe',
-    alt: 'Overwatch 2 ESP outlines and health bars while escorting a payload on Havana',
-    caption: 'Objective markers',
-    captionDesc: 'ESP outlines and health labels around a live payload.',
+    key: 'gallery05',
+    file: 'gallery-05.png',
+    src: `${gameplay}/gallery-05.png`,
+    palette: 'ruin-city',
+    alt: 'Sand Raiders Cheats player ESP on raiders in a sunset ruin town on planet Sophie',
+    caption: 'Ruin town fight',
+    captionDesc: 'Box ESP, skeleton overlays, and rare crate markers in coastal ruins.',
   },
   {
-    key: 'ow5',
-    file: 'ow-5.jpg',
-    src: `${gameplay}/ow-5.jpg`,
-    palette: 'cassidy-cyan',
-    alt: 'Overwatch 2 night ESP list with health and ultimate labels on rooftop targets',
-    caption: 'High-ground view',
-    captionDesc: 'Elevated camera with health and ultimate labels on distant targets.',
-  },
-  {
-    key: 'ow2gothic',
-    file: 'ow-2.jpg',
-    src: `${gameplay}/ow-2.jpg`,
-    palette: 'yellow-esp',
-    alt: 'Overwatch 2 yellow ESP blob and skeleton overlays in a gothic interior',
-    caption: 'Interior overlay',
-    captionDesc: 'ESP fill and skeleton readouts in a tight interior.',
+    key: 'gallery06',
+    file: 'gallery-06.jpg',
+    src: `${gameplay}/gallery-06.jpg`,
+    palette: 'dieselpunk-cyan',
+    alt: 'Sand Raiders of Sophie trainer-style overlay: long-range ESP listing players and rare safes on cliffside buildings',
+    caption: 'Long-range awareness',
+    captionDesc: 'Multi-target labels for PvP contacts, AI, and high-tier loot.',
   },
 ];
 
@@ -146,19 +99,27 @@ export const EXTRA_SHOTS = {
     src: `${extras}/cloud-dma.jpg`,
     file: 'cloud-dma.jpg',
     palette: 'cloud-dma',
-    alt: 'Cloud DMA extra for Overwatch Cheats on Windows PC',
+    alt: 'Cloud DMA extra for Sand Raiders Cheats on Windows PC',
     caption: 'Cloud DMA',
-    captionDesc: 'Cloud DMA extra that runs with Overwatch Cheats.',
+    captionDesc: 'Cloud DMA extra that runs with Sand Raiders Cheats.',
   },
   hwid: {
     src: `${extras}/spoofer.jpg`,
     file: 'spoofer.jpg',
     palette: 'hwid-spoofer',
-    alt: 'HWID Spoofer extra for Overwatch Cheats on Windows PC',
+    alt: 'HWID Spoofer extra for Sand Raiders Cheats on Windows PC',
     caption: 'HWID Spoofer',
-    captionDesc: 'HWID Spoofer extra that runs with Overwatch Cheats.',
+    captionDesc: 'HWID Spoofer extra that runs with Sand Raiders Cheats.',
   },
-} as const satisfies Record<'dma' | 'hwid', ExtraShot>;
+  skinChanger: {
+    src: `${extras}/skin-changer.png`,
+    file: 'skin-changer.png',
+    palette: 'skin-changer',
+    alt: 'Sand Raiders of Sophie Skin Changer logo with tactical weapons and bronze crest',
+    caption: 'Skin Changer',
+    captionDesc: 'Preview client-side cosmetics and blueprint looks for SAND: Raiders of Sophie.',
+  },
+} as const satisfies Record<'dma' | 'hwid' | 'skinChanger', ExtraShot>;
 
 const ALT_BY_FILE = Object.fromEntries([
   ...SCREENSHOT_RANK.map((shot) => [shot.file, shot.alt]),
@@ -173,11 +134,18 @@ const PALETTE_BY_SRC = Object.fromEntries([
   ...Object.values(EXTRA_SHOTS).map((shot) => [shot.src, shot.palette]),
 ]);
 
-export function screenshotAlt(src: string, fallback = 'Overwatch overlay screenshot from Overwatch Cheat'): string {
+export function screenshotAlt(src: string, fallback = 'Sand Raiders Cheats overlay screenshot for SAND: Raiders of Sophie'): string {
   if (!src) return fallback;
   const file = src.split('/').pop()?.replace(/-\d+\.webp$/i, '') ?? '';
   const withExt = file.includes('.') ? file : `${file}.jpg`;
-  return ALT_BY_SRC[src] ?? ALT_BY_FILE[withExt] ?? ALT_BY_FILE[`${file}.jpg`] ?? fallback;
+  const base = withExt.replace(/\.(png|jpe?g)$/i, '');
+  return (
+    ALT_BY_SRC[src] ??
+    ALT_BY_FILE[withExt] ??
+    ALT_BY_FILE[`${base}.jpg`] ??
+    ALT_BY_FILE[`${base}.png`] ??
+    fallback
+  );
 }
 
 export function screenshotPalette(src: string): string {

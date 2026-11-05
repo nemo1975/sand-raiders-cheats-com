@@ -10,109 +10,114 @@ export interface PageSeoEntry {
 
 export const PAGE_SEO: Record<string, PageSeoEntry> = {
   '/': {
-    title: 'Overwatch 2 Cheats | Aimbot, ESP and Radar on PC',
+    title: 'Sand Raiders of Sophie Cheats | Sand Raiders Cheats on PC',
     description:
-      'Play Overwatch 2 on Windows PC with aimbot, player ESP, and radar. Review heroes, season notes, and plans before you buy.',
+      'Sand Raiders of Sophie cheats and Sand Raiders Cheats for Windows PC—aimbot, player ESP, Trampler ESP, radar, and skin changer. Review plans, hacks modules, and status before checkout.',
   },
   '/features/': {
-    title: 'Overwatch 2 Features | Overwatch Cheats',
+    title: 'Sand Raiders of Sophie Hacks & Features | Sand Raiders Cheats',
     description:
-      'Explore Overwatch Cheats features for Overwatch 2: aimbot, silent aim, triggerbot, player ESP, hero ESP for Overwatch characters, and 2D/3D radar on Windows PC.',
+      'Sand Raiders of Sophie hacks and cheat modules on PC: aimbot, silent aim, player ESP, Trampler ESP, loot markers, and 2D/3D radar. Compare listed Sand Raiders Cheats features before you buy.',
   },
   '/store/': {
-    title: 'Overwatch Cheats Store | Overwatch 2 Plans',
+    title: 'Sand Raiders Cheats Store | Sand Raiders of Sophie Plans',
     description:
-      'Buy Overwatch Cheats for Overwatch 2 on Windows PC. Play with listed aimbot, ESP, and radar. Monthly $35, lifetime $150. Cloud DMA $50 and HWID Spoofer $50 / $150 extras run with the cheat.',
+      'Buy Sand Raiders of Sophie cheats on Windows PC. Sand Raiders Cheats monthly $35, lifetime $150. Skin Changer, Cloud DMA, and HWID Spoofer extras run with the main overlay.',
   },
   '/dma/': {
-    title: 'Cloud DMA | Overwatch Cheat',
+    title: 'Cloud DMA | Sand Raiders of Sophie Cheats',
     description:
-      'Cloud DMA is a $50 one-time extra that runs with Overwatch Cheats on Windows PC. Compare delivery notes, requirements, and checkout details before you purchase.',
+      'Cloud DMA is a $50 one-time extra that runs with Sand Raiders Cheats on Windows PC. Compare delivery notes, requirements, and checkout details before you purchase.',
   },
   '/hwid/': {
-    title: 'HWID Spoofer | Overwatch Cheat',
+    title: 'HWID Spoofer | Sand Raiders Cheats',
     description:
-      'HWID Spoofer is a $50 monthly or $150 lifetime extra that runs with Overwatch Cheats on Windows PC. Compare notes and checkout details before purchase.',
+      'HWID Spoofer is a $50 monthly or $150 lifetime extra that runs with Sand Raiders Cheats on Windows PC. Compare notes and checkout details before purchase.',
+  },
+  '/skin-changer/': {
+    title: 'SAND Skin Changer | Sand Raiders of Sophie Cheats',
+    description:
+      'Skin Changer for SAND: Raiders of Sophie on Windows PC — $35 monthly or $99 lifetime. Preview blueprint cosmetics with Sand Raiders Cheats. Read requirements before checkout.',
   },
   '/status/': {
-    title: 'Overwatch Status | Overwatch Cheat',
+    title: 'Sand Raiders Cheats Status | SAND on Steam PC',
     description:
-      'Check Overwatch Cheat compatibility and anti-cheat status information. Review reported updates and compatibility notices following Overwatch patches before making a purchase.',
+      'Check Sand Raiders of Sophie cheats compatibility and BattlEye status after Steam patches. Review Sand Raiders Cheats notices before you launch or renew a plan.',
   },
   '/preview/': {
-    title: 'Overwatch Cheat Preview | Overwatch Cheat',
+    title: 'Sand Raiders Cheats Preview | ESP & Radar Screenshots',
     description:
-      'Explore the Overwatch Cheat feature preview, including aiming features, player visuals, and radar. Review available functionality and compatibility information before checkout.',
+      'Preview Sand Raiders of Sophie cheats overlays: player ESP, loot markers, aimbot UI, and radar from Sand Raiders Cheats on Windows PC before checkout.',
   },
   '/setup/': {
-    title: 'Overwatch Cheat Setup | Overwatch Cheat',
+    title: 'Sand Raiders Cheats Setup | Windows Steam PC',
     description:
-      'Learn about Overwatch Cheat setup requirements, available feature settings, Windows PC compatibility, and important anti-cheat considerations.',
+      'Setup for Sand Raiders of Sophie cheats on Windows PC: Steam client order, overlay settings, and BattlEye considerations for Sand Raiders Cheats buyers.',
   },
   '/support/': {
-    title: 'Overwatch Cheat Support | Overwatch Cheat',
+    title: 'Sand Raiders Cheats Support | Setup & Checkout Help',
     description:
-      'Find support information for Overwatch Cheat, including purchase and delivery questions, setup guidance, configuration help, and compatibility updates.',
+      'Support for Sand Raiders of Sophie cheats: purchase delivery, Windows PC setup, configuration, and compatibility updates for Sand Raiders Cheats plans.',
   },
   '/faq/': {
-    title: 'Overwatch Cheat FAQ | Overwatch Cheats',
+    title: 'Sand Raiders Cheats FAQ | Hacks, Codes & Trainer',
     description:
-      'Find answers to common questions about Overwatch cheats, including monthly and lifetime plans, aiming features, player ESP, radar, setup, compatibility, and support.',
+      'FAQ for Sand Raiders of Sophie cheats: monthly and lifetime plans, hacks vs ESP, cheat codes searches, trainer terminology, setup, BattlEye, and checkout.',
   },
   '/reviews/': {
-    title: 'Overwatch Cheat Reviews | Buyer Feedback',
+    title: 'Sand Raiders Cheats Reviews | Buyer Checklist',
     description:
-      'Explore buyer feedback about Overwatch Cheat, including aiming features, player ESP, radar, setup, and compatibility. Review available information before choosing a plan.',
+      'Buyer checklist for Sand Raiders of Sophie cheats: ESP, radar, aimbot, setup, and compatibility before you choose a Sand Raiders Cheats plan on Windows PC.',
   },
   '/blog/': {
-    title: 'Overwatch Guides | Overwatch 2 Heroes, Ranks and Patch Notes',
+    title: 'Sand Raiders Guides | Cheats, Hacks & Storm Dive',
     description:
-      'Read Overwatch and Overwatch 2 guides: Overwatch characters, patch notes, ranks, Juno, D.Va, skins, battle pass, Steam charts, and how to play with listed cheats.',
+      'Guides for Sand Raiders of Sophie cheats: Tramplers, cheat codes meaning, trainer searches, BattlEye notes, and Sand Raiders Cheats on Windows PC.',
   },
   '/intel/': {
-    title: 'Overwatch Feature Guides | Overwatch Cheat',
+    title: 'Sand Raiders Feature Guides | ESP & Aimbot',
     description:
-      'Read Overwatch Cheat articles about aimbot, player ESP, wallhack-style overlays, hero ESP, objective ESP, and 2D/3D radar on Windows PC.',
+      'Sand Raiders of Sophie cheats articles: aimbot, player ESP, wallhack-style overlays, Trampler ESP, loot ESP, and radar on Windows PC.',
   },
   '/guides/': {
-    title: 'Overwatch Guides | Overwatch Cheat',
+    title: 'Sand Raiders Guides | Cheats Before You Buy',
     description:
-      'Practical Overwatch guides covering Overwatch 2 heroes, ranks, patch notes, and how to review Overwatch cheats before you buy.',
+      'Practical guides for Sand Raiders of Sophie: Tramplers, extraction routes, Steam setup, and how to review Sand Raiders cheats before checkout.',
   },
   '/howto/': {
-    title: 'Overwatch Setup Articles | Overwatch Cheat',
+    title: 'Sand Raiders Setup Articles | Windows PC',
     description:
-      'Windows PC setup notes for Overwatch Cheat, including Battle.net and Steam client order, configuration, and compatibility checks.',
+      'Windows PC setup for Sand Raiders of Sophie cheats: Steam order, configuration, and compatibility checks for Sand Raiders Cheats.',
   },
   '/updates/': {
-    title: 'Overwatch Updates | Overwatch Cheat',
+    title: 'Sand Raiders Updates | Patches & Compatibility',
     description:
-      'Overwatch Cheat updates on Overwatch 2 patches, Defense Matrix notes, and current compatibility reminders for Windows PC.',
+      'Sand Raiders Cheats updates on SAND: Raiders of Sophie patches, BattlEye notes, and compatibility reminders for Sand Raiders of Sophie cheats on PC.',
   },
   '/forum/': {
-    title: 'Overwatch Cheat Forum | Overlay Q&A',
+    title: 'Sand Raiders Cheats Forum | ESP & Plans Q&A',
     description:
-      'Practical answers on Overwatch ESP, aimbot, radar, Windows PC setup, and Overwatch Cheat plans. Each discussion links back to a source guide.',
+      'Forum answers on Sand Raiders of Sophie cheats: ESP, aimbot, radar, Windows PC setup, and Sand Raiders Cheats plans with links to source guides.',
   },
   '/search/': {
-    title: 'Search Overwatch Cheat',
+    title: 'Search Sand Raiders of Sophie Cheats',
     description:
-      'Search Overwatch Cheat articles, forum discussions, FAQ answers, and pages for Overwatch cheats on Windows PC.',
+      'Search Sand Raiders Cheats guides, FAQ, forum threads, and store pages for Sand Raiders of Sophie cheats, hacks, cheat codes, and trainer topics.',
   },
   '/terms/': {
-    title: 'Terms & Conditions | Overwatch Cheat',
+    title: 'Terms & Conditions | Sand Raiders Cheats',
     description:
-      'Purchase terms, license use, and refund policy for Overwatch Cheat products sold through overwatchcheat.com.',
+      'Purchase terms, license use, and refund policy for Sand Raiders Cheats products sold through sandraiderscheats.com.',
   },
   '/privacy/': {
-    title: 'Privacy Policy | Overwatch Cheat',
+    title: 'Privacy Policy | Sand Raiders Cheats',
     description:
-      'How overwatchcheat.com uses analytics, cookies, and contact data when you browse or request support.',
+      'How sandraiderscheats.com uses analytics, cookies, and contact data when you browse or request support.',
   },
   '/about/': {
-    title: 'About Overwatch Cheat',
+    title: 'About Sand Raiders of Sophie Cheats',
     description:
-      'What Overwatch Cheat publishes: Overwatch features, plans, setup notes, and status information at overwatchcheat.com.',
+      'About Sand Raiders Cheats: Sand Raiders of Sophie feature notes, plans, setup, and status at sandraiderscheats.com—not affiliated with the game publishers.',
   },
 };
 

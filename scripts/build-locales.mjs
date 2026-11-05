@@ -29,9 +29,9 @@ const LANGS = [
 const FEATURE_TITLES = [
   'Aimbot',
   'Player ESP',
-  'Hero ESP',
-  'Ability ESP',
-  'Objective ESP',
+  'Trampler ESP',
+  'Loot ESP',
+  'Extraction ESP',
   'Radar',
   'Team Check',
   'Silent Aim',

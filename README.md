@@ -1,8 +1,8 @@
-# Overwatch Cheat
+# Sand Raiders Cheats
 
-Marketing site for [overwatchcheat.com](https://overwatchcheat.com) — listed Overwatch overlay tools for Windows PC.
+Marketing site for [sandraiderscheats.com](https://sandraiderscheats.com) — listed overlays for **SAND: Raiders of Sophie** on Windows PC (Steam).
 
-Overwatch (including Overwatch 2) is Blizzard’s team-based hero shooter. This site documents the current vendor listing for the Windows PC client only. It is not affiliated with or endorsed by Blizzard Entertainment.
+SAND: Raiders of Sophie is a dieselpunk PvPvE extraction shooter with Trampler mech building, Voyage exploration, and Storm Dive high-risk sorties. This site documents the current vendor listing for the Windows PC client only. It is not affiliated with or endorsed by tinyBuild, Hologryph, or TowerHaus.
 
 ## What the listing covers
 
@@ -10,8 +10,7 @@ Features are taken from the live product page. The site does not invent modules,
 
 - Aimbot, aim assist, silent aim, and triggerbot
 - Player ESP — box, skeleton, health, name, and distance
-- Hero ESP, ability ESP, team check, and enemy-only ESP
-- Objective ESP
+- Trampler ESP, loot ESP, extraction markers, team check, and enemy-only ESP
 - 2D radar and 3D radar
 
 Related listings: Cloud DMA and HWID Spoofer (separate checkout).
@@ -23,7 +22,7 @@ Related listings: Cloud DMA and HWID Spoofer (separate checkout).
 | Monthly | $35 USD | 30 days (P30D) |
 | Lifetime | $150 USD | P99Y |
 
-Both plans use the same listed feature set. Checkout goes through `/go/` (vendor redirect). Re-check the [status](https://overwatchcheat.com/status/) page after every Overwatch client update.
+Both plans use the same listed feature set. Checkout goes through `/go/` (vendor redirect). Re-check the [status](https://sandraiderscheats.com/status/) page after every Steam update.
 
 ## Stack
 

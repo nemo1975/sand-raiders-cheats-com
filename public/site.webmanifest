@@ -1,7 +1,7 @@
 {
-  "name": "Overwatch Cheat",
-  "short_name": "Overwatch Cheat",
-  "description": "Overwatch cheats for Windows PC with aimbot, player ESP, radar, and configuration options.",
+  "name": "Sand Raiders Cheats",
+  "short_name": "Sand Raiders Cheats",
+  "description": "Sand Raiders cheats for SAND: Raiders of Sophie on Windows PC with aimbot, player ESP, Trampler ESP, and radar.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -10,12 +10,12 @@
   "lang": "en-US",
   "icons": [
     {
-      "src": "/apple-touch-icon.png?v=ow",
+      "src": "/apple-touch-icon.png?v=sr3",
       "sizes": "180x180",
       "type": "image/png"
     },
     {
-      "src": "/favicon-32.png?v=ow",
+      "src": "/favicon-32.png?v=sr3",
       "sizes": "32x32",
       "type": "image/png"
     }

@@ -5,6 +5,7 @@ import { resolvePageSeo } from '../config/seo';
 import { breadcrumbSchema, webPageSchema } from '../utils/schema';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { ROUTES } from '../utils/path';
+import { PRIMARY_CHECKOUT_PATH } from '../config/checkout';
 import { Button } from '@/components/starwind/button';
 import Icon from '../components/icons/Icon.astro';
 
@@ -31,17 +32,27 @@ const breadcrumbs = [
     <div class="mx-auto max-w-6xl px-5">
       <Breadcrumbs items={breadcrumbs} />
       <header class="mx-auto mt-6 max-w-3xl text-center">
-      <h1 class="text-3xl font-bold uppercase tracking-tight md:text-4xl">Overwatch Features</h1>
+      <h1 class="text-3xl font-bold uppercase tracking-tight md:text-4xl">Sand Raiders of Sophie Cheats &amp; Features</h1>
       <p class="mt-4 text-sm leading-relaxed text-muted-foreground">
-        This page lists Overwatch modules from the current product listing. Compare plans on the
-        <a href={ROUTES.store}>store</a>, look at screenshots on the <a href={ROUTES.preview}>preview</a>,
-        and read the <a href="/cheats/">Overwatch cheats overview</a> if you want a starting map.
-        Confirm <a href={ROUTES.status}>status</a> after an Overwatch client update.
+        This page lists Sand Raiders of Sophie hacks and overlay modules from the current product listing—not
+        in-game <a href="/cheat-codes/">Sand Raiders cheat codes</a>. Compare plans on the
+        <a href={ROUTES.store}>store</a>, read the <a href="/cheats/">Sand Raiders cheats overview</a>,
+        <a href="/hacks/">hacks terminology</a>, and <a href="/trainer/">trainer searches</a>, then confirm
+        <a href={ROUTES.status}>status</a> after an SAND Steam client update.
       </p>
       <div class="mt-8 flex flex-wrap justify-center gap-3">
-        <Button as="a" href={ROUTES.store} variant="primary">
-          View store
+        <Button
+          as="a"
+          href={PRIMARY_CHECKOUT_PATH}
+          variant="primary"
+          target="_blank"
+          rel="noopener noreferrer sponsored"
+        >
+          Buy now
           <Icon name="arrowRight" size={17} />
+        </Button>
+        <Button as="a" href={ROUTES.store} variant="outline">
+          View store
         </Button>
         <Button as="a" href={ROUTES.status} variant="outline">Check status</Button>
         <Button as="a" href={ROUTES.preview} variant="outline">Preview overlays</Button>

@@ -7,6 +7,7 @@ import ResponsiveImage from './ResponsiveImage.astro';
 import StoreSubProducts from './StoreSubProducts.astro';
 import Icon from './icons/Icon.astro';
 import { ROUTES } from '../utils/path';
+import { checkoutPath } from '../config/checkout';
 import { Badge } from '@/components/starwind/badge';
 import { Button } from '@/components/starwind/button';
 
@@ -19,7 +20,7 @@ const planNotes: Record<string, { blurb: string; highlight?: boolean; duration: 
   lifetime: { blurb: 'Same listed modules, billed once in USD.', highlight: true, duration: 'One-time' },
 };
 const showcaseFeatures = product.fullFeatures.slice(0, 12);
-const storeFacts = ['Available', 'Overwatch 2', 'Windows PC', 'Aimbot', 'ESP', '2 plans'];
+const storeFacts = ['Available', 'SAND: Raiders of Sophie', 'Windows PC', 'Aimbot', 'ESP', '2 plans'];
 ---
 
 <section
@@ -61,8 +62,8 @@ const storeFacts = ['Available', 'Overwatch 2', 'Windows PC', 'Aimbot', 'ESP', '
         <div class="flex flex-1 flex-col p-6 lg:p-7">
           <div class="flex flex-wrap items-center gap-2">
             <Badge variant="secondary">{product.badge}</Badge>
-            <Badge>Overwatch Cheats</Badge>
-            <Badge variant="outline">Overwatch 2</Badge>
+            <Badge>Sand Raiders Cheats</Badge>
+            <Badge variant="outline">SAND: Raiders of Sophie</Badge>
             <Badge variant="outline">Windows PC</Badge>
           </div>
           <p class="mt-4 text-2xl font-bold normal-case">{product.title}</p>
@@ -78,7 +79,14 @@ const storeFacts = ['Available', 'Overwatch 2', 'Windows PC', 'Aimbot', 'ESP', '
             }
           </ul>
           <div class="mt-6 flex flex-col gap-2 sm:flex-row">
-            <Button as="a" href={ROUTES.store} variant="primary" class="sm:flex-1">
+            <Button
+              as="a"
+              href={checkoutPath('sand')}
+              variant="primary"
+              class="sm:flex-1"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+            >
               Buy now
               <Icon name="arrowRight" size={17} />
             </Button>
@@ -124,7 +132,7 @@ const storeFacts = ['Available', 'Overwatch 2', 'Windows PC', 'Aimbot', 'ESP', '
                     </li>
                     <li class="flex items-start gap-2">
                       <Icon name="check" size={14} class="mt-0.5 shrink-0 text-primary" />
-                      Windows PC via Battle.net or Steam
+                      Windows PC via Steam
                     </li>
                   </ul>
                   <Button
@@ -132,6 +140,8 @@ const storeFacts = ['Available', 'Overwatch 2', 'Windows PC', 'Aimbot', 'ESP', '
                     href={checkoutUrlWithPlan(product.buyUrl, plan.id)}
                     variant={note?.highlight ? 'primary' : 'outline'}
                     class="mt-6 w-full"
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
                   >
                     Choose {plan.label}
                     <Icon name="arrowRight" size={17} />

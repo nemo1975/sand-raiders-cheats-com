@@ -47,9 +47,9 @@ const extra = [
   'Table of contents',
   'Continue reading',
   'More articles',
-  'Overwatch store',
-  'Review Overwatch Cheats plans',
-  'Compare monthly and lifetime Overwatch Cheats access for Overwatch 2 on the store page, then continue to checkout for current pricing.',
+  'Sand Raiders store',
+  'Review Sand Raiders Cheats plans',
+  'Compare monthly and lifetime Sand Raiders Cheats access for SAND: Raiders of Sophie on the store page, then continue to checkout for current pricing.',
 ];
 for (const item of extra) add(keys, item);
 

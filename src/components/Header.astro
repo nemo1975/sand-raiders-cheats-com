@@ -8,7 +8,7 @@ import SiteSearch from './SiteSearch.astro';
 
 import type { IconName } from './icons/types';
 import { isExternalHref, navLinkIsActive } from '../utils/path';
-import { checkoutPath } from '../config/checkout';
+import { checkoutPath, PRIMARY_CHECKOUT_PATH } from '../config/checkout';
 
 const currentPath = Astro.url.pathname;
 
@@ -25,22 +25,31 @@ const navIcons: Record<string, IconName> = {
 
 function productPageCheckoutPath(pathname: string): string | null {
   const path = pathname.endsWith('/') ? pathname : `${pathname}/`;
-  if (path === '/store/') return checkoutPath('overwatch');
+  if (path === '/store/') return checkoutPath('sand');
   if (path === '/dma/') return checkoutPath('dma');
   if (path === '/hwid/') return checkoutPath('hwid');
+  if (path === '/skin-changer/') return checkoutPath('skin');
   return null;
 }
 
 const productCheckout = productPageCheckoutPath(currentPath);
-const purchaseUrl = productCheckout ?? '/store/';
+const purchaseUrl = productCheckout ?? PRIMARY_CHECKOUT_PATH;
 ---
 
 <header class="pointer-events-none fixed inset-x-0 top-0 z-50">
   <div class="flex w-full max-w-full justify-center px-3 pt-3 sm:px-4 sm:pt-4" data-floating-nav>
     <div class="site-nav-bar pointer-events-auto">
       <a href="/" class="site-nav-bar__brand">
-        <img src="/favicon.svg?v=ow" width="22" height="22" alt="Overwatch Cheats" />
-        <span>Overwatch<span class="text-primary" data-i18n-en="Cheats">Cheats</span></span>
+        <img
+          src="/images/brand/nav-mark.png?v=sr3"
+          width="28"
+          height="28"
+          alt=""
+          aria-hidden="true"
+          class="site-nav-bar__mark"
+          decoding="async"
+        />
+        <span>{t.site.name}</span>
       </a>
 
       <nav class="site-nav-bar__links" aria-label="Primary">

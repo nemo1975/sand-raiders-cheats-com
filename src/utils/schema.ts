@@ -1,5 +1,5 @@
 import type { FaqItem } from '../i18n/types';
-import { BRAND_NAME, SUPPORT_EMAIL } from '../config/site';
+import { BRAND_NAME, DISCORD_INVITE, SUPPORT_EMAIL } from '../config/site';
 import { SITE_ORIGIN, absoluteAssetUrl, canonicalUrl, getOrganizationSameAs } from '../config/seo';
 import { checkoutUrlWithPlan, getProductPlans } from '../data/productPricing';
 import { screenshotAlt } from '../data/screenshots';
@@ -42,14 +42,14 @@ export function websiteSchema() {
     url: `${SITE_ORIGIN}/`,
     inLanguage: 'en-US',
     description:
-      'Overwatch Cheat covers Overwatch cheats, aimbot, player ESP, radar, plans, and Windows PC setup information.',
+      'Sand Raiders of Sophie Cheats and Sand Raiders Cheats — aimbot, player ESP, radar, cheat codes guides, and Windows PC plans at sandraiderscheats.com.',
   };
 }
 
 export function organizationSchema() {
   const sameAs = [
     ...getOrganizationSameAs(),
-    'https://store.steampowered.com/app/2357570/Overwatch_2/',
+    'https://store.steampowered.com/app/1431300/SAND_Raiders_of_Sophie/',
   ].filter((url, index, list) => list.indexOf(url) === index);
 
   return {
@@ -65,26 +65,8 @@ export function organizationSchema() {
         '@type': 'ContactPoint',
         contactType: 'customer support',
         ...(SUPPORT_EMAIL ? { email: SUPPORT_EMAIL } : {}),
-        url: canonicalUrl('/go/'),
-        availableLanguage: [
-          'English',
-          'German',
-          'French',
-          'Spanish',
-          'Portuguese',
-          'Russian',
-          'Japanese',
-          'Korean',
-          'Chinese',
-          'Hebrew',
-          'Turkish',
-          'Arabic',
-          'Vietnamese',
-          'Polish',
-          'Italian',
-          'Thai',
-          'Indonesian',
-        ],
+        url: DISCORD_INVITE,
+        availableLanguage: ['English'],
         areaServed: 'Worldwide',
       },
     ],
@@ -183,7 +165,7 @@ export function productSchema(input: {
   image?: string;
   sku?: string;
 }) {
-  const plans = getProductPlans(input.sku ?? 'overwatch');
+  const plans = getProductPlans(input.sku ?? 'sand');
   const offerBase = {
     url: offerUrl(input.offerUrl),
     availability: 'https://schema.org/InStock',

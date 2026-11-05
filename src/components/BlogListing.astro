@@ -27,7 +27,7 @@ const tags = getBlogTags();
 const { featured, grid } = getBlogListing(activeTag);
 const listingTitle = activeTag === 'all' ? t.blog.latestTitle : `${activeTag} articles`;
 const listingSubtitle =
-  activeTag === 'all' ? t.blog.latestSubtitle : `Overwatch Cheat articles tagged ${activeTag}.`;
+  activeTag === 'all' ? t.blog.latestSubtitle : `Sand Raiders Cheats articles tagged ${activeTag}.`;
 
 const breadcrumbs = [
   { name: 'Home', path: '/' },
@@ -71,9 +71,9 @@ const filters = [{ label: t.blog.filterAll, value: 'all' as const }, ...tags.map
         <p class="section-header__subtitle">{listingSubtitle}</p>
         <p class="mt-3 text-sm leading-relaxed text-muted-foreground">
           Start with the <a href={ROUTES.store}>store</a> for plans, the <a href={ROUTES.features}>features</a> list for modules,
-          and the <a href={ROUTES.status}>status</a> page after an Overwatch patch. The
+          and the <a href={ROUTES.status}>status</a> page after an SAND patch. The
           <a href="/esp/">player ESP guide</a> and
-          <a href="/cheats/">Overwatch cheats overview</a> are the usual first reads.
+          <a href="/cheats/">Sand Raiders cheats overview</a> are the usual first reads.
         </p>
       </header>
 

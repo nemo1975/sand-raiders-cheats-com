@@ -41,33 +41,38 @@ const featuredPosts = getFeaturedBlogPosts(3);
   </div>
 </section>
 
-<nav class="border-y border-border bg-muted/10 py-12 md:py-16" aria-label="Explore Overwatch Cheat">
+<nav class="border-y border-border bg-muted/10 py-12 md:py-16" aria-label="Explore Sand Raiders Cheats">
   <div class="mx-auto max-w-6xl px-5">
     <SectionHeader
       as="h2"
       eyebrow="Explore"
-      title="Every Overwatch Cheat page stays one click away"
-      desc="Overwatch Cheats pages for Overwatch 2: plans, overlays, setup, status, Overwatch characters, patch notes, and ranks."
+      title="Every Sand Raiders Cheats page stays one click away"
+      desc="Sand Raiders of Sophie cheats pages: hacks guides, cheat codes meaning, trainer searches, store plans, setup, status, Tramplers, and BattlEye notes."
       titleId="explore-title"
     />
     <ul class="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
       {[
-        { href: ROUTES.features, title: 'Overwatch 2 features', desc: 'Aimbot, player ESP, radar, and hero ESP.' },
-        { href: ROUTES.store, title: 'Overwatch Cheats store', desc: 'Monthly $35 and lifetime $150 plans.' },
-        { href: ROUTES.dma, title: 'Cloud DMA', desc: 'Extra that runs with Overwatch Cheats.' },
-        { href: ROUTES.hwid, title: 'HWID Spoofer', desc: 'Extra that runs with Overwatch Cheats.' },
-        { href: '/ow2/', title: 'Overwatch 2', desc: 'Release date, download, Steam charts, player count.' },
-        { href: '/heroes/', title: 'Overwatch characters', desc: 'OW characters and Overwatch 2 heroes.' },
-        { href: '/patch/', title: 'Overwatch patch notes', desc: 'Season timing and Overwatch 2 patch notes.' },
-        { href: '/ranks/', title: 'Overwatch ranks', desc: 'Overwatch 2 ranks and challenger score.' },
-        { href: '/juno/', title: 'Juno Overwatch', desc: 'Support hero notes and hero ESP.' },
-        { href: '/dva/', title: 'D.Va Overwatch', desc: 'D.Va Overwatch vs Overwatch 2 reads.' },
-        { href: '/skins/', title: 'Overwatch 2 skins', desc: 'Battle pass cosmetics, not cheat modules.' },
-        { href: '/tier/', title: 'Overwatch 2 tier list', desc: 'New hero drops vs the store list.' },
-        { href: '/cross/', title: 'Cross platform', desc: 'Is Overwatch 2 cross platform on PC.' },
-        { href: '/blizzard/', title: 'OW / .ow / أوفرواتش', desc: 'Blizzard naming for the same game.' },
+        { href: ROUTES.features, title: 'Sand Raiders of Sophie cheats & features', desc: 'Hacks modules: aimbot, player ESP, radar, Trampler ESP.' },
+        { href: '/cheats/', title: 'Sand Raiders of Sophie Cheats guide', desc: 'Module map before you open the store.' },
+        { href: '/cheat-codes/', title: 'Sand Raiders cheat codes', desc: 'Why PC searches rarely mean typed codes.' },
+        { href: '/hacks/', title: 'Sand Raiders of Sophie hacks', desc: 'ESP, wallhack, and radar terminology.' },
+        { href: '/trainer/', title: 'Sand Raiders of Sophie trainer', desc: 'Trainer searches vs overlay toggles.' },
+        { href: ROUTES.store, title: 'Sand Raiders Cheats store', desc: 'Monthly $35 and lifetime $150 plans.' },
+        { href: ROUTES.dma, title: 'Cloud DMA', desc: 'Extra that runs with Sand Raiders Cheats.' },
+        { href: ROUTES.hwid, title: 'HWID Spoofer', desc: 'Extra that runs with Sand Raiders Cheats.' },
+        { href: ROUTES.skinChanger, title: 'Skin Changer', desc: 'Blueprint and cosmetic previews for SAND.' },
+        { href: '/early-access/', title: 'Early Access on Steam', desc: 'Launch date, download, and Steam requirements.' },
+        { href: '/tramplers/', title: 'Tramplers', desc: 'Walker editor, blueprints, and Trampler ESP.' },
+        { href: '/roadmap/', title: 'Early Access roadmap', desc: 'Steam updates and status re-checks.' },
+        { href: '/storm-dive/', title: 'Storm Dive vs Voyage', desc: 'Mode pacing and overlay ranges.' },
+        { href: '/sophie/', title: 'Planet Sophie', desc: 'Dieselpunk setting and lore context.' },
+        { href: '/voyage/', title: 'Voyage Mode', desc: 'Low-pressure expeditions for testing overlays.' },
+        { href: '/blueprints/', title: 'Trampler blueprints', desc: 'Saved builds—not cheat modules.' },
+        { href: '/weapons/', title: 'Weapons and loot', desc: 'Loadouts vs the store feature list.' },
+        { href: '/squad/', title: 'Squad vs solo', desc: 'Team check filters and crew roles.' },
+        { href: '/publisher/', title: 'Publisher names', desc: 'tinyBuild, Hologryph, TowerHaus—no affiliation.' },
         { href: '/esp/', title: 'Player ESP', desc: 'Box, skeleton, health, and distance.' },
-        { href: '/aim/', title: 'Overwatch aimbot', desc: 'Aim assist, silent aim, triggerbot.' },
+        { href: '/aim/', title: 'Sand Raiders aimbot', desc: 'Aim assist, silent aim, triggerbot.' },
       ].map((item) => (
         <li>
           <a

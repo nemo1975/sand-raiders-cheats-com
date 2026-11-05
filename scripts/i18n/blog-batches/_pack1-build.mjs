@@ -57,7 +57,7 @@ for (const en of batch) {
 }
 
 pack.de.Reviews = 'Bewertungen';
-pack.ar['Overwatch store'] = 'متجر Overwatch';
+pack.ar['Sand Raiders store'] = 'متجر SAND: Raiders of Sophie';
 
 const SUBS = {
   ru: [
@@ -79,7 +79,7 @@ const SUBS = {
   ],
   he: [['FAQ', 'שאלות נפוצות']],
   th: [['FAQ', 'คำถามที่พบบ่อย']],
-  de: [['Defense-Matrix-Hinweise', 'Hinweise zu Defense Matrix']],
+  de: [['Defense-Matrix-Hinweise', 'Hinweise zu BattlEye']],
 };
 for (const [lang, pairs] of Object.entries(SUBS)) {
   for (const en of batch) {
@@ -130,12 +130,12 @@ const STORE_PAGE = {
   it: 'pagina negozio', th: 'หน้าร้าน', id: 'halaman toko',
 };
 const DM_NOTES = {
-  de: 'Hinweise zu Defense Matrix', fr: 'notes Defense Matrix', es: 'notas de Defense Matrix',
-  pt: 'notas de Defense Matrix', ru: 'заметки Defense Matrix', ja: 'Defense Matrixメモ',
-  ko: 'Defense Matrix 노트', zh: 'Defense Matrix 说明', 'zh-TW': 'Defense Matrix 說明',
-  he: 'הערות Defense Matrix', tr: 'Defense Matrix notları', ar: 'ملاحظات Defense Matrix',
-  vi: 'ghi chú Defense Matrix', pl: 'uwagi Defense Matrix', it: 'note Defense Matrix',
-  th: 'โน้ต Defense Matrix', id: 'catatan Defense Matrix',
+  de: 'Hinweise zu BattlEye', fr: 'notes BattlEye', es: 'notas de BattlEye',
+  pt: 'notas de BattlEye', ru: 'заметки BattlEye', ja: 'BattlEyeメモ',
+  ko: 'BattlEye 노트', zh: 'BattlEye 说明', 'zh-TW': 'BattlEye 說明',
+  he: 'הערות BattlEye', tr: 'BattlEye notları', ar: 'ملاحظات BattlEye',
+  vi: 'ghi chú BattlEye', pl: 'uwagi BattlEye', it: 'note BattlEye',
+  th: 'โน้ต BattlEye', id: 'catatan BattlEye',
 };
 const REVIEWS = {
   de: 'Bewertungscheckliste', fr: 'liste de contrôle d’évaluation', es: 'lista de revisión',
@@ -152,16 +152,16 @@ function tokens(lang, key) {
 const PHRASES = [
   ['Windows PC setup guide', (lang) => tokens(lang, 'Windows PC setup guide')],
   ['Windows PC setup', (lang) => tokens(lang, 'Windows PC setup')],
-  ['Defense Matrix notes', (lang) => DM_NOTES[lang]],
+  ['BattlEye notes', (lang) => DM_NOTES[lang]],
   ['reviews checklist', (lang) => REVIEWS[lang]],
   ['monthly vs lifetime', (lang) => tokens(lang, 'monthly vs lifetime')],
   ['features page', (lang) => tokens(lang, 'features page')],
   ['status page', (lang) => tokens(lang, 'status page')],
   ['store page', (lang) => STORE_PAGE[lang]],
-  ['Overwatch store', (lang) => lang === 'ar' ? 'متجر Overwatch' : tokens(lang, 'Overwatch store')],
+  ['Sand Raiders store', (lang) => lang === 'ar' ? 'متجر SAND: Raiders of Sophie' : tokens(lang, 'Sand Raiders store')],
   ['player ESP', (lang) => tokens(lang, 'Player ESP')],
-  ['hero ESP', (lang) => tokens(lang, 'Hero ESP')],
-  ['objective ESP', (lang) => tokens(lang, 'objective ESP') || tokens(lang, 'Objective ESP')],
+  ['Trampler ESP', (lang) => tokens(lang, 'Trampler ESP')],
+  ['loot ESP', (lang) => tokens(lang, 'loot ESP') || tokens(lang, 'Loot ESP')],
   ['FAQ', (lang) => tokens(lang, 'FAQ')],
   ['setup', (lang) => tokens(lang, 'Setup')],
   ['features', (lang) => tokens(lang, 'features')],
@@ -205,7 +205,7 @@ const EXTRA = {
   tr: [['özelliği', 'özellikler']],
   ar: [
     ['ميزات رادار', 'الميزات لرادار'],
-    ['متجر Overwatch Cheats', 'المتجر Overwatch Cheats'],
+    ['متجر Sand Raiders Cheats', 'المتجر Sand Raiders Cheats'],
   ],
   it: [
     ['testo dello store', 'testo del negozio'],

@@ -1,8 +1,30 @@
+/** Zadeyo affiliate code — every product checkout must use this link prefix. */
+export const ZADEYO_AFFILIATE_CODE = 'AMAN';
+
+/** Vendor product slugs (path segment after /products/). */
+export const ZADEYO_PRODUCT_SLUGS = {
+  sand: 'sand-raiders-of-sophie',
+  dma: 'cloud-dma',
+  hwid: 'hwid-spoofer',
+  skin: 'skin-changer',
+};
+
+/** Full Zadeyo affiliate URL for a checkout product id. */
+export function zadeyoAffiliateUrl(productKey) {
+  const slug = ZADEYO_PRODUCT_SLUGS[productKey];
+  if (!slug) {
+    throw new Error(`Unknown checkout product: ${productKey}`);
+  }
+  const to = encodeURIComponent(`/products/${slug}`);
+  return `https://zadeyo.com/go/${ZADEYO_AFFILIATE_CODE}?to=${to}`;
+}
+
 /** Checkout destinations keyed by internal product id. */
 export const CHECKOUT_URLS = {
-  overwatch: 'https://zadeyo.com/go/USMAN?to=%2Fproducts%2Foverwatch-2',
-  dma: 'https://zadeyo.com/go/USMAN?to=%2Fproducts%2Fcloud-dma',
-  hwid: 'https://zadeyo.com/go/USMAN?to=%2Fproducts%2Fhwid-spoofer',
+  sand: zadeyoAffiliateUrl('sand'),
+  dma: zadeyoAffiliateUrl('dma'),
+  hwid: zadeyoAffiliateUrl('hwid'),
+  skin: zadeyoAffiliateUrl('skin'),
 };
 
 function slashPairs(path, url) {
@@ -13,18 +35,19 @@ function slashPairs(path, url) {
   ];
 }
 
-/** Checkout paths → external product URLs (used by Node serve + Astro middleware). */
+/** Checkout paths → external product URLs (used by Node serve + Astro middleware + edge worker). */
 export const CHECKOUT_PATH_REDIRECTS = new Map([
-  ...slashPairs('/go', CHECKOUT_URLS.overwatch),
-  ...slashPairs('/monthly', CHECKOUT_URLS.overwatch),
-  ...slashPairs('/lifetime', CHECKOUT_URLS.overwatch),
-  ...slashPairs('/go/overwatch', CHECKOUT_URLS.overwatch),
-  ...slashPairs('/go/overwatch/monthly', CHECKOUT_URLS.overwatch),
-  ...slashPairs('/go/overwatch/lifetime', CHECKOUT_URLS.overwatch),
-  ...slashPairs('/go/monthly', CHECKOUT_URLS.overwatch),
-  ...slashPairs('/go/lifetime', CHECKOUT_URLS.overwatch),
+  ...slashPairs('/go', CHECKOUT_URLS.sand),
+  ...slashPairs('/monthly', CHECKOUT_URLS.sand),
+  ...slashPairs('/lifetime', CHECKOUT_URLS.sand),
+  ...slashPairs('/go/sand', CHECKOUT_URLS.sand),
+  ...slashPairs('/go/sand/monthly', CHECKOUT_URLS.sand),
+  ...slashPairs('/go/sand/lifetime', CHECKOUT_URLS.sand),
+  ...slashPairs('/go/monthly', CHECKOUT_URLS.sand),
+  ...slashPairs('/go/lifetime', CHECKOUT_URLS.sand),
   ...slashPairs('/go/dma', CHECKOUT_URLS.dma),
   ...slashPairs('/go/hwid', CHECKOUT_URLS.hwid),
+  ...slashPairs('/go/skin-changer', CHECKOUT_URLS.skin),
 ]);
 
 export function resolveCheckoutPathRedirect(pathname) {

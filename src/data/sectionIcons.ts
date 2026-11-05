@@ -4,9 +4,9 @@ export const featureIcons: Record<string, IconName> = {
   ESP: 'featureEsp',
   Aimbot: 'featureAimbot',
   'Player ESP': 'comparePlayerEsp',
-  'Hero ESP': 'compareWardLocator',
-  'Ability ESP': 'compareAbilityRadius',
-  'Objective ESP': 'compareRuneTimer',
+  'Trampler ESP': 'compareWardLocator',
+  'Loot ESP': 'compareAbilityRadius',
+  'Loot ESP': 'compareRuneTimer',
   'Overlay Options': 'featureEsp',
   Radar: 'featureRadar',
   'Team Check': 'compareCloudBackup',
@@ -54,11 +54,11 @@ export const forumCategoryIcons: Record<string, IconName> = {
 export const heroStatusPills: { icon: IconName; label: string }[] = [
   { icon: 'espActive', label: 'Player ESP' },
   { icon: 'radarOnline', label: 'Radar' },
-  { icon: 'lootEsp', label: 'Hero ESP' },
+  { icon: 'lootEsp', label: 'Trampler ESP' },
   { icon: 'softAim', label: 'Aimbot' },
-  { icon: 'mapHack', label: 'Objective ESP' },
+  { icon: 'mapHack', label: 'Loot ESP' },
   { icon: 'liveStatus', label: 'Check Status' },
-  { icon: 'autoUpdates', label: 'Defense Matrix' },
+  { icon: 'autoUpdates', label: 'BattlEye' },
   { icon: 'support247', label: 'Windows PC' },
 ];
 
@@ -70,8 +70,9 @@ export const heroStatIcons: IconName[] = [
 ];
 
 export const cheatTierIcons: Record<string, IconName> = {
-  'Overwatch Cheat': 'tierPro',
+  'Sand Raiders Cheats': 'tierPro',
   'Cloud DMA': 'dmaHardware',
+  'Skin Changer': 'cosmetic',
   'HWID Spoofer': 'systemUtility',
   Lite: 'tierLite',
   Pro: 'tierPro',
